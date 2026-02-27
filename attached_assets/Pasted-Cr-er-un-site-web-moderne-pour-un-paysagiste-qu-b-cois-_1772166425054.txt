@@ -1,0 +1,63 @@
+Créer un site web moderne pour un paysagiste québécois avec les spécifications suivantes : Style et Design
+
+Design moderne avec un frontend visuellement impressionnant inspiré par les couleurs de la nature (verts, bruns terreux, bleus naturels) Typographie élégante et professionnelle avec de beaux fonts modernes Animations fluides et transitions douces Design responsive (mobile, tablette, desktop) Tout le contenu doit être en FRANÇAIS
+
+Page 1 : Accueil (Home) Section Hero
+
+Carrousel d'images horizontal avec défilement automatique montrant des projets de paysagement Titre accrocheur avec animation Courte description : "Nous aménageons l'extérieur de vos maisons et les rendons plus belles. Spécialistes en aménagement paysager, embellissement de piscines et création d'espaces extérieurs de rêve."
+
+Sections de résumé Inclure un aperçu visuel de chaque page avec images et texte court :
+
+Nos Services - Carte cliquable avec icône Nos Réalisations - Galerie miniature avec 3-4 photos Nous Joindre - Call-to-action avec bouton
+
+Design avec cards/sections bien espacées Boutons d'appel à l'action vers chaque page
+
+Page 2 : Nos Services Liste détaillée des services avec descriptions :
+
+Paysagement Extérieur
+
+Description des aménagements de terrains, plates-bandes, etc.
+
+Embellissement de Piscines
+
+Aménagement autour des piscines, création d'oasis
+
+Jardins Décoratifs
+
+Conception et entretien de jardins magnifiques
+
+Terrassement
+
+Travaux de nivellement et préparation de terrain
+
+Chaque service dans une card avec icône Layout en grille responsive
+
+Page 3 : Nos Réalisations
+
+Introduction décrivant le savoir-faire et l'expertise Galerie photo interactive (grid layout) Effet lightbox au clic sur les photos Légendes pour chaque projet si possible
+
+Page 4 : Nous Joindre Formulaire de contact
+
+Champs : Nom, Email, Téléphone, Message Bouton d'envoi stylisé Validation des champs
+
+Informations de contact
+
+Email : gelinasjeff01@gmail.com Téléphone : (418) 575-8529 Adresse : 1800 Rue Bresse, Québec, QC G2G 2P2 Facebook : https://www.facebook.com/TBGpaysagiste?locale=fr_CA
+
+Carte Google Maps intégrée
+
+Afficher l'emplacement de l'entreprise
+
+Navigation
+
+Menu de navigation fixe en haut Logo ou nom de l'entreprise Liens vers : Accueil | Services | Réalisations | Contact Menu hamburger responsive sur mobile
+
+Éléments importants
+
+Utiliser UNIQUEMENT les images que je fournirai - ne pas générer d'images placeholder aléatoires Si des images temporaires sont nécessaires, utiliser des placeholder qui correspondent au thème du paysagement (nature, jardins, piscines, terrasses) Optimisation SEO basique Animations au scroll (fade-in, slide-in) Boutons avec effets hover sophistiqués
+
+Technologies
+
+React avec Tailwind CSS Composants réutilisables Icons de Lucide React Design system cohérent avec variables de couleurs nature
+
+Crée un site web professionnel, visuellement époustouflant qui reflète la beauté et la qualité du travail d'un paysagiste expert.
