@@ -4,43 +4,43 @@ import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { ZoomIn } from "lucide-react";
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 
+import image1 from "@assets/b9e4cdc69_481462575_3899378960275555_154621930400892747_n_1772166840090.jpg";
+import image2 from "@assets/404c501e4_473551526_3862657073947744_3116717267078103199_n_1772166840090.jpg";
+import image3 from "@assets/32d1c0c61_474792806_3870058806540904_6220378788283094045_n_1772166840091.jpg";
+import image4 from "@assets/d1ad557b5_123366883_2747233618823434_1717557200794668059_n_1772166840091.jpg";
+import image5 from "@assets/3d9efb3d1_119784194_2706942506185879_5663350872197088632_n_1772166840092.jpg";
+
 const PORTFOLIO_IMAGES = [
   {
     id: 1,
-    url: "https://images.unsplash.com/photo-1558904541-efa843a96f09?auto=format&fit=crop&q=80&w=800", /* modern patio */
-    title: "Terrasse Moderne",
+    url: image1,
+    title: "Aménagement Paysager",
     category: "Paysagement"
   },
   {
     id: 2,
-    url: "https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&q=80&w=800", /* luxury pool */
-    title: "Oasis Aquatique",
+    url: image2,
+    title: "Espace Piscine",
     category: "Piscines"
   },
   {
     id: 3,
-    url: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=800", /* beautiful garden path */
-    title: "Sentier Fleuri",
+    url: image3,
+    title: "Sentier de Jardin",
     category: "Jardins"
   },
   {
     id: 4,
-    url: "https://images.unsplash.com/photo-1584483756834-31518175d7c8?auto=format&fit=crop&q=80&w=800", /* stone wall landscaping */
-    title: "Muret de Soutènement",
+    url: image4,
+    title: "Projet de Terrassement",
     category: "Terrassement"
   },
   {
     id: 5,
-    url: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=800", /* outdoor living room */
-    title: "Espace de Vie Extérieur",
+    url: image5,
+    title: "Design Extérieur",
     category: "Paysagement"
-  },
-  {
-    id: 6,
-    url: "https://images.unsplash.com/photo-1595152865913-c91cb10f0896?auto=format&fit=crop&q=80&w=800", /* garden with flowers */
-    title: "Aménagement Floral",
-    category: "Jardins"
-  },
+  }
 ];
 
 export default function Portfolio() {

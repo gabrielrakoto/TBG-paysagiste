@@ -1,13 +1,18 @@
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Leaf, Waves, TreePine, Shovel, Check } from "lucide-react";
 
+import image1 from "@assets/b9e4cdc69_481462575_3899378960275555_154621930400892747_n_1772166840090.jpg";
+import image2 from "@assets/404c501e4_473551526_3862657073947744_3116717267078103199_n_1772166840090.jpg";
+import image3 from "@assets/32d1c0c61_474792806_3870058806540904_6220378788283094045_n_1772166840091.jpg";
+import image5 from "@assets/3d9efb3d1_119784194_2706942506185879_5663350872197088632_n_1772166840092.jpg";
+
 const services = [
   {
     id: "paysagement",
     title: "Paysagement Extérieur",
     icon: Leaf,
     description: "Nous concevons des plans d'aménagement sur mesure qui transforment votre cour en un espace de vie exceptionnel. De la plantation stratégique à la pose de gazon, notre expertise garantit un résultat durable et esthétique.",
-    image: "https://images.unsplash.com/photo-1558904541-efa843a96f09?auto=format&fit=crop&q=80&w=1000",
+    image: image1,
     features: ["Plans 3D sur mesure", "Plantation d'arbres et arbustes", "Pose de tourbe", "Éclairage paysager"]
   },
   {
@@ -15,7 +20,7 @@ const services = [
     title: "Embellissement de Piscines",
     icon: Waves,
     description: "Votre piscine mérite un écrin à sa hauteur. Nous créons des contours de piscine élégants, sécuritaires et faciles d'entretien en utilisant des matériaux de première qualité comme la pierre naturelle ou le pavé uni.",
-    image: "https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&q=80&w=1000",
+    image: image2,
     features: ["Contours en pavé uni", "Chutes d'eau intégrées", "Clôtures esthétiques", "Végétation adaptée"]
   },
   {
@@ -23,7 +28,7 @@ const services = [
     title: "Jardins Décoratifs",
     icon: TreePine,
     description: "Apportez couleur et vie à votre propriété avec nos jardins décoratifs. Nous sélectionnons des plantes adaptées à notre climat québécois pour garantir une floraison magnifique du printemps à l'automne.",
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=1000",
+    image: image3,
     features: ["Plates-bandes fleuries", "Jardins d'eau", "Rocailles", "Entretien saisonnier"]
   },
   {
@@ -31,7 +36,7 @@ const services = [
     title: "Terrassement",
     icon: Shovel,
     description: "La base de tout bon aménagement réside dans un terrassement professionnel. Nous modifions le relief de votre terrain pour en optimiser l'usage, prévenir les problèmes de drainage et créer des espaces plans.",
-    image: "https://images.unsplash.com/photo-1616422285623-1498b7f872c3?auto=format&fit=crop&q=80&w=1000", /* landscape excavator work */
+    image: image5,
     features: ["Nivellement de terrain", "Murs de soutènement", "Drainage", "Excavation"]
   }
 ];

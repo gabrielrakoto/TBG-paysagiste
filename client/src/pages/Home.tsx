@@ -86,9 +86,8 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group">
-                {/* landscape gardener working */}
                 <img 
-                  src="https://images.unsplash.com/photo-1599839619722-39751411ea63?auto=format&fit=crop&q=80&w=1000" 
+                  src={image4} 
                   alt="Notre équipe au travail"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />

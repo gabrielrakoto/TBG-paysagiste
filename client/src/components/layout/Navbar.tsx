@@ -41,7 +41,7 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-2 group">
             <Leaf className={`h-8 w-8 transition-colors ${isScrolled || location !== "/" ? "text-primary" : "text-white"}`} />
             <span className={`font-serif text-2xl font-bold tracking-tight transition-colors ${isScrolled || location !== "/" ? "text-foreground" : "text-white"}`}>
-              Éden Paysage: TBG paysagiste
+              TBG paysagiste
             </span>
           </Link>
 
