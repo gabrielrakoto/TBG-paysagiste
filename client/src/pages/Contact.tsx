@@ -12,7 +12,7 @@ import type { ContactMessageInput } from "@shared/routes";
 
 export default function Contact() {
   const mutation = useCreateContactMessage();
-  
+
   const form = useForm<ContactMessageInput>({
     resolver: zodResolver(insertContactMessageSchema),
     defaultValues: {
@@ -42,16 +42,16 @@ export default function Contact() {
         </AnimatedSection>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
-          
+
           {/* Contact Information & Map */}
           <AnimatedSection delay={0.1} className="space-y-8">
             <div className="bg-primary text-primary-foreground rounded-3xl p-8 shadow-xl relative overflow-hidden">
               {/* Decorative elements */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3 blur-2xl"></div>
               <div className="absolute bottom-0 left-0 w-48 h-48 bg-black/10 rounded-full translate-y-1/3 -translate-x-1/4 blur-xl"></div>
-              
+
               <h2 className="text-2xl font-serif font-bold mb-8 relative z-10">Informations de Contact</h2>
-              
+
               <div className="space-y-6 relative z-10">
                 <div className="flex items-start gap-4">
                   <div className="bg-white/10 p-3 rounded-xl shrink-0">
@@ -61,7 +61,7 @@ export default function Contact() {
                     <h3 className="font-semibold text-lg mb-1">Notre Adresse</h3>
                     <p className="text-primary-foreground/80 leading-relaxed">
                       1800 Rue Bresse,<br />
-                      Québec, QC G2G 2P2
+                      Québec, QC G2G 2N8
                     </p>
                   </div>
                 </div>
@@ -103,13 +103,13 @@ export default function Contact() {
 
             {/* Google Map Embedded */}
             <div className="rounded-3xl overflow-hidden shadow-lg h-[300px] border border-border bg-muted">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1s0x4cb8912e75e11dcb%3A0xc3cf909d7c3b885f!2s1800%20Rue%20Bresse%2C%20Qu%C3%A9bec%2C%20QC%20G2G%202P2%2C%20Canada!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen={true} 
-                loading="lazy" 
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2730.8066126255267!2d-71.38684289999999!3d46.8081152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb899a1bc9bb7e5%3A0xee77ca8083d08aaa!2s1800%20Rue%20Bresse%2C%20Qu%C3%A9bec%2C%20QC%20G2G%202N8!5e0!3m2!1sfr!2sca!4v1772170258642!5m2!1sfr!2sca"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Carte de localisation"
               ></iframe>
@@ -120,10 +120,10 @@ export default function Contact() {
           <AnimatedSection delay={0.2}>
             <div className="bg-card border border-border/50 rounded-3xl p-8 md:p-10 shadow-xl">
               <h2 className="text-2xl font-serif font-bold text-foreground mb-8">Envoyez-nous un message</h2>
-              
+
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  
+
                   <FormField
                     control={form.control}
                     name="name"
@@ -152,7 +152,7 @@ export default function Contact() {
                         </FormItem>
                       )}
                     />
-                    
+
                     <FormField
                       control={form.control}
                       name="phone"
@@ -175,10 +175,10 @@ export default function Contact() {
                       <FormItem>
                         <FormLabel>Votre Projet</FormLabel>
                         <FormControl>
-                          <Textarea 
-                            placeholder="Décrivez-nous vos besoins (aménagement paysager, piscine, terrassement...)" 
-                            className="min-h-[150px] resize-none bg-muted/50" 
-                            {...field} 
+                          <Textarea
+                            placeholder="Décrivez-nous vos besoins (aménagement paysager, piscine, terrassement...)"
+                            className="min-h-[150px] resize-none bg-muted/50"
+                            {...field}
                           />
                         </FormControl>
                         <FormMessage />
@@ -186,9 +186,9 @@ export default function Contact() {
                     )}
                   />
 
-                  <Button 
-                    type="submit" 
-                    size="lg" 
+                  <Button
+                    type="submit"
+                    size="lg"
                     className="w-full h-14 rounded-xl text-base shadow-lg hover:shadow-xl transition-all"
                     disabled={mutation.isPending}
                   >
@@ -198,7 +198,7 @@ export default function Contact() {
               </Form>
             </div>
           </AnimatedSection>
-          
+
         </div>
       </section>
     </div>

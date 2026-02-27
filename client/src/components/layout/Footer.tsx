@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="bg-foreground text-primary-foreground pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          
+
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <Leaf className="h-8 w-8 text-primary" />
@@ -52,7 +52,7 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-muted/80">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary shrink-0" />
-                <span>1800 Rue Bresse,<br/>Québec, QC G2G 2P2</span>
+                <span>1800 Rue Bresse,<br />Québec, QC G2G 2N8</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-primary shrink-0" />
@@ -65,7 +65,7 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        
+
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted/60">
           <p>© {new Date().getFullYear()} ÉdenPaysage. Tous droits réservés.</p>
           <div className="flex gap-4">
