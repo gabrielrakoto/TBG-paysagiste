@@ -6,13 +6,18 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useEffect } from "react";
 
+import image1 from "@assets/b9e4cdc69_481462575_3899378960275555_154621930400892747_n_1772166840090.jpg";
+import image2 from "@assets/404c501e4_473551526_3862657073947744_3116717267078103199_n_1772166840090.jpg";
+import image3 from "@assets/32d1c0c61_474792806_3870058806540904_6220378788283094045_n_1772166840091.jpg";
+import image4 from "@assets/d1ad557b5_123366883_2747233618823434_1717557200794668059_n_1772166840091.jpg";
+import image5 from "@assets/3d9efb3d1_119784194_2706942506185879_5663350872197088632_n_1772166840092.jpg";
+
 const HERO_IMAGES = [
-  /* landscape luxury modern backyard */
-  "https://images.unsplash.com/photo-1558904541-efa843a96f09?auto=format&fit=crop&q=80&w=2000",
-  /* beautiful garden path */
-  "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=2000",
-  /* modern pool landscaping */
-  "https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&q=80&w=2000"
+  image1,
+  image2,
+  image3,
+  image4,
+  image5
 ];
 
 export default function Home() {
