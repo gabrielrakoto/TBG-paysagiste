@@ -11,7 +11,7 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-2">
               <Leaf className="h-8 w-8 text-primary" />
               <span className="font-serif text-2xl font-bold tracking-tight">
-                ÉdenPaysage
+                TBG Paysagiste
               </span>
             </Link>
             <p className="text-muted/80 text-sm leading-relaxed">
@@ -67,7 +67,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted/60">
-          <p>© {new Date().getFullYear()} ÉdenPaysage. Tous droits réservés.</p>
+          <p>© {new Date().getFullYear()} TBG Paysagiste. Tous droits réservés.</p>
           <div className="flex gap-4">
             <a href="#" className="hover:text-white transition-colors">Politique de confidentialité</a>
             <a href="#" className="hover:text-white transition-colors">Mentions légales</a>

@@ -40,8 +40,8 @@ export default function Home() {
             {HERO_IMAGES.map((img, idx) => (
               <div key={idx} className="relative flex-[0_0_100%] h-full">
                 <div className="absolute inset-0 bg-black/40 z-10" />
-                <img 
-                  src={img} 
+                <img
+                  src={img}
                   alt={`Aménagement paysager ${idx + 1}`}
                   className="w-full h-full object-cover"
                 />
@@ -56,19 +56,19 @@ export default function Home() {
               Créateurs d'Espaces
             </span>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={0.2}>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white max-w-4xl text-balance leading-tight mb-6">
               Nous aménageons l'extérieur de vos maisons et les rendons plus belles.
             </h1>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={0.4}>
             <p className="text-lg md:text-xl text-white/90 max-w-2xl text-balance mb-10">
               Spécialistes en aménagement paysager, embellissement de piscines et création d'espaces extérieurs de rêve dans la région de Québec.
             </p>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={0.6} className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg" className="rounded-full h-14 px-8 text-base bg-primary hover:bg-primary/90 text-white border-0">
               <Link href="/contact">Obtenir un devis gratuit</Link>
@@ -86,14 +86,14 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
               <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group">
-                <img 
-                  src={image4} 
+                <img
+                  src={image4}
                   alt="Notre équipe au travail"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
             </AnimatedSection>
-            
+
             <div className="space-y-8">
               <AnimatedSection delay={0.2}>
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
@@ -101,10 +101,10 @@ export default function Home() {
                 </h2>
                 <div className="w-20 h-1 bg-primary mt-6 rounded-full"></div>
               </AnimatedSection>
-              
+
               <AnimatedSection delay={0.3}>
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  Avec plus de 10 ans d'expérience, ÉdenPaysage conçoit et réalise des aménagements sur mesure qui respectent la nature et subliment votre propriété.
+                  Avec plus de 10 ans d'expérience, TBG Paysagiste conçoit et réalise des aménagements sur mesure qui respectent la nature et subliment votre propriété.
                 </p>
               </AnimatedSection>
 
@@ -182,7 +182,7 @@ export default function Home() {
               </AnimatedSection>
             ))}
           </div>
-          
+
           <div className="mt-12 text-center">
             <Button asChild variant="outline" className="rounded-full">
               <Link href="/services">Voir tous nos services</Link>
