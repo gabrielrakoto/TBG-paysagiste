@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden pt-24 md:pt-28">
         <div className="absolute inset-0 z-0" ref={emblaRef}>
           <div className="flex h-full w-full">
             {HERO_IMAGES.map((img, idx) => (
