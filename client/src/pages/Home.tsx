@@ -104,7 +104,7 @@ export default function Home() {
 
               <AnimatedSection delay={0.3}>
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  Avec plus de 10 ans d'expérience, TBG Paysagiste conçoit et réalise des aménagements sur mesure qui respectent la nature et subliment votre propriété.
+                  Avec plus de 10 ans d'expérience, Paysagementpro conçoit et réalise des aménagements sur mesure qui respectent la nature et subliment votre propriété.
                 </p>
               </AnimatedSection>
 
