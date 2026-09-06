@@ -1,0 +1,23 @@
+# PROJET
+
+**Date** : 2026-08-04
+
+## Prompt initial
+
+tu vois le pied de page lorsque je clique sur les liens qui mene vers le page du site web cela me laisse ne bas de la page mais ne me ramene pas en haut de la page que j'ai cliqu├®
+
+## Décisions importantes
+
+- **Mise en conformité Loi 25 (protection des renseignements personnels, Québec)** :
+  - Création de la page `/politique-de-confidentialite` (`client/src/pages/PolitiqueConfidentialite.tsx`), couvrant : renseignements collectés (formulaire de contact, absence actuelle de cookies analytics), finalités, mesures de sécurité, identité du responsable de la protection des renseignements personnels (RPRP), et droits d'accès/rectification.
+  - Ajout d'un lien vers cette page dans le footer (visible sur toutes les pages).
+  - Ajout d'une case à cocher de consentement explicite sur le formulaire de contact, obligatoire avant l'envoi (`consent` requis à `true` via Zod dans `shared/schema.ts`), avec colonne `consent` (boolean) ajoutée à la table `contact_messages` — nécessite `npm run db:push` pour appliquer le changement de schéma en base.
+  - Le RPRP désigné (nom : Gabriel, courriel : gabrielrakotor40@outlook.com, tél : 581-979-2198) est indiqué sur la page de politique de confidentialité; ces mêmes coordonnées (fictives, site de démonstration) remplacent les anciennes coordonnées dans le Footer et la page Contact.
+- **Loi 96 (langue française)** : le site était déjà entièrement en français sans version anglaise; correction de l'attribut `lang="en"` → `lang="fr-CA"` dans `client/index.html`, ajout d'un `<title>` et d'une meta description en français.
+
+## Stack choisie
+
+- Frontend : React + TypeScript (Vite), Wouter (routing), Tailwind CSS, shadcn/ui (Radix), Framer Motion.
+- Formulaires : react-hook-form + Zod (via `@hookform/resolvers`).
+- Backend : Express (Node.js/TypeScript), Drizzle ORM + PostgreSQL.
+- Déploiement : Vercel.

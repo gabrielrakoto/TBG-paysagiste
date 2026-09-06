@@ -13,6 +13,7 @@ import Home from "@/pages/Home";
 import Services from "@/pages/Services";
 import Portfolio from "@/pages/Portfolio";
 import Contact from "@/pages/Contact";
+import PolitiqueConfidentialite from "@/pages/PolitiqueConfidentialite";
 
 function Router() {
   return (
@@ -25,6 +26,7 @@ function Router() {
           <Route path="/services" component={Services} />
           <Route path="/realisations" component={Portfolio} />
           <Route path="/contact" component={Contact} />
+          <Route path="/politique-de-confidentialite" component={PolitiqueConfidentialite} />
           <Route component={NotFound} />
         </Switch>
       </main>

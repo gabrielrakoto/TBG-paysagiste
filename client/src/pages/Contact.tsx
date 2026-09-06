@@ -1,7 +1,9 @@
+import { Link } from "wouter";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -20,6 +22,7 @@ export default function Contact() {
       email: "",
       phone: "",
       message: "",
+      consent: false,
     },
   });
 
@@ -72,7 +75,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Téléphone</h3>
-                    <p className="text-primary-foreground/80">(418) 575-8529</p>
+                    <p className="text-primary-foreground/80">581-979-2198</p>
                   </div>
                 </div>
 
@@ -82,7 +85,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-lg mb-1">Courriel</h3>
-                    <p className="text-primary-foreground/80">gelinasjeff01@gmail.com</p>
+                    <p className="text-primary-foreground/80">gabrielrakotor40@outlook.com</p>
                   </div>
                 </div>
 
@@ -182,6 +185,31 @@ export default function Contact() {
                           />
                         </FormControl>
                         <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="consent"
+                    render={({ field }) => (
+                      <FormItem className="flex flex-row items-start gap-3 rounded-xl bg-muted/50 p-4">
+                        <FormControl>
+                          <Checkbox
+                            checked={field.value}
+                            onCheckedChange={field.onChange}
+                            className="mt-0.5"
+                          />
+                        </FormControl>
+                        <div className="space-y-1 leading-relaxed">
+                          <FormLabel className="font-normal text-sm text-foreground">
+                            J'accepte que mes renseignements soient utilisés pour me recontacter au sujet de ma demande, conformément à la{" "}
+                            <Link href="/politique-de-confidentialite" className="text-primary underline underline-offset-2 hover:text-primary/80">
+                              politique de confidentialité
+                            </Link>.
+                          </FormLabel>
+                          <FormMessage />
+                        </div>
                       </FormItem>
                     )}
                   />

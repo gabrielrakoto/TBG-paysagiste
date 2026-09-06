@@ -11,7 +11,7 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-2">
               <Leaf className="h-8 w-8 text-primary" />
               <span className="font-serif text-2xl font-bold tracking-tight">
-                TBG Paysagiste
+                Paysagementpro
               </span>
             </Link>
             <p className="text-muted/80 text-sm leading-relaxed">
@@ -56,21 +56,20 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-primary shrink-0" />
-                <span>(418) 575-8529</span>
+                <span>581-979-2198</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary shrink-0" />
-                <span>gelinasjeff01@gmail.com</span>
+                <span>gabrielrakotor40@outlook.com</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted/60">
-          <p>© {new Date().getFullYear()} TBG Paysagiste. Tous droits réservés.</p>
+          <p>© {new Date().getFullYear()} Paysagementpro. Tous droits réservés.</p>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-white transition-colors">Politique de confidentialité</a>
-            <a href="#" className="hover:text-white transition-colors">Mentions légales</a>
+            <Link href="/politique-de-confidentialite" className="hover:text-white transition-colors">Politique de confidentialité</Link>
           </div>
         </div>
       </div>
