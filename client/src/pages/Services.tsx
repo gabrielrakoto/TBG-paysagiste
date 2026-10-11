@@ -76,9 +76,9 @@ export default function Services() {
                     </div>
                   </div>
 
-                  <div className="flex flex-col justify-center pb-2 lg:w-[42%] lg:px-8 lg:pb-0">
+                  <div className="relative z-10 flex min-w-0 flex-col justify-center pb-2 lg:w-[42%] lg:px-8 lg:pb-0">
                     <p className="font-display text-xl md:text-2xl text-ink/60">Service</p>
-                    <h2 className="mt-1 font-display font-normal text-4xl md:text-5xl lg:text-[52px] leading-[1.02] tracking-[-0.02em]">
+                    <h2 className="mt-1 font-display font-normal text-4xl md:text-5xl lg:text-[2.8vw] leading-[1.02] tracking-[-0.02em]">
                       {service.title}
                     </h2>
                     <p className="mt-6 text-[15px] leading-7 text-ink/75">{service.description}</p>
