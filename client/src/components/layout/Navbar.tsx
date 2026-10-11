@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Leaf } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Leaf } from "lucide-react";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { ArrowLink } from "@/components/ArrowLink";
 import { motion } from "framer-motion";
 
 const routes = [
-  { path: "/", label: "Accueil" },
-  { path: "/services", label: "Nos Services" },
-  { path: "/realisations", label: "Nos Réalisations" },
-  { path: "/contact", label: "Nous Joindre" },
+  { path: "/", label: "accueil" },
+  { path: "/services", label: "nos services" },
+  { path: "/realisations", label: "nos réalisations" },
+  { path: "/contact", label: "nous joindre" },
 ];
 
 export function Navbar() {
@@ -21,78 +21,80 @@ export function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Transparent par-dessus la photo d'accueil, blanc partout ailleurs
+  const solid = isScrolled || location !== "/";
+  const lineColor = solid ? "border-ink/15" : "border-white/30";
 
   return (
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || location !== "/"
-          ? "bg-background/95 backdrop-blur-md shadow-md py-4"
-          : "bg-transparent py-6"
-        }`}
+      className={`fixed top-0 left-0 right-0 z-50 h-20 border-b transition-colors duration-300 ${lineColor} ${
+        solid ? "bg-white text-ink" : "bg-transparent text-white"
+      }`}
     >
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 group">
-            <Leaf className={`h-8 w-8 transition-colors ${isScrolled || location !== "/" ? "text-primary" : "text-white"}`} />
-            <span className={`font-serif text-2xl font-bold tracking-tight transition-colors ${isScrolled || location !== "/" ? "text-foreground" : "text-white"}`}>
-              Paysagementpro
-            </span>
+      <div className="flex h-full items-center">
+        <div className="flex flex-1 items-center justify-between gap-6 px-6 md:px-[30px]">
+          <Link href="/" className="flex items-center gap-2">
+            <Leaf className={`h-7 w-7 ${solid ? "text-primary" : "text-white"}`} />
+            <span className="font-serif text-2xl font-bold tracking-tight">Paysagementpro</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            {routes.map((route) => (
-              <Link
-                key={route.path}
-                href={route.path}
-                className={`text-sm font-medium transition-colors hover:text-primary ${location === route.path
-                    ? isScrolled || location !== "/" ? "text-primary" : "text-white"
-                    : isScrolled || location !== "/" ? "text-muted-foreground" : "text-white/80"
-                  }`}
-              >
-                {route.label}
-              </Link>
-            ))}
-            <Button asChild size="lg" className="rounded-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all">
-              <Link href="/contact">Devis Gratuit</Link>
-            </Button>
-          </nav>
-
-          {/* Mobile Navigation Toggle */}
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon" className={isScrolled || location !== "/" ? "text-foreground" : "text-white"}>
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px] flex flex-col pt-16">
-              <nav className="flex flex-col gap-6">
-                {routes.map((route) => (
-                  <Link
-                    key={route.path}
-                    href={route.path}
-                    onClick={() => setIsOpen(false)}
-                    className={`text-xl font-serif font-medium transition-colors hover:text-primary ${location === route.path ? "text-primary" : "text-foreground"
-                      }`}
-                  >
-                    {route.label}
-                  </Link>
-                ))}
-                <div className="pt-6 border-t mt-4">
-                  <Button asChild size="lg" className="w-full rounded-full" onClick={() => setIsOpen(false)}>
-                    <Link href="/contact">Demander un Devis</Link>
-                  </Button>
-                </div>
-              </nav>
-            </SheetContent>
-          </Sheet>
+          <ArrowLink
+            href="/contact"
+            tone={solid ? "dark" : "light"}
+            className="hidden md:inline-flex text-lg md:text-xl [&>span:nth-child(2)]:h-8"
+          >
+            Démarrer votre projet
+          </ArrowLink>
         </div>
+
+        {/* Case du menu, alignée sur la colonne de droite */}
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
+          <SheetTrigger asChild>
+            <button
+              className={`flex h-full items-center justify-center px-6 lg:w-[var(--rail-w)] lg:border-l ${lineColor}`}
+              aria-label="Ouvrir le menu"
+            >
+              <span className="flex w-8 flex-col gap-2">
+                <span className="h-px w-full bg-current" />
+                <span className="h-px w-full bg-current" />
+                <span className="h-px w-full bg-current" />
+              </span>
+            </button>
+          </SheetTrigger>
+          <SheetContent
+            side="right"
+            className="flex w-full flex-col border-l-0 bg-rail px-8 pt-24 text-white sm:max-w-md [&>button]:text-white"
+          >
+            <SheetTitle className="sr-only">Menu</SheetTitle>
+            <nav className="flex flex-col">
+              {routes.map((route) => (
+                <Link
+                  key={route.path}
+                  href={route.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`border-b border-white/15 py-5 font-display text-4xl font-light tracking-[-0.02em] transition-opacity hover:opacity-100 ${
+                    location === route.path ? "opacity-100" : "opacity-60"
+                  }`}
+                >
+                  {route.label}
+                </Link>
+              ))}
+            </nav>
+            <div className="mt-auto pb-10" onClick={() => setIsOpen(false)}>
+              <ArrowLink href="/contact" tone="light">
+                Demander une soumission
+              </ArrowLink>
+            </div>
+          </SheetContent>
+        </Sheet>
       </div>
     </motion.header>
   );

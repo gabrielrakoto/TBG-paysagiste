@@ -14,6 +14,13 @@ tu vois le pied de page lorsque je clique sur les liens qui mene vers le page du
   - Ajout d'une case à cocher de consentement explicite sur le formulaire de contact, obligatoire avant l'envoi (`consent` requis à `true` via Zod dans `shared/schema.ts`), avec colonne `consent` (boolean) ajoutée à la table `contact_messages` — nécessite `npm run db:push` pour appliquer le changement de schéma en base.
   - Le RPRP désigné (nom : Gabriel, courriel : gabrielrakotor40@outlook.com, tél : 581-979-2198) est indiqué sur la page de politique de confidentialité; ces mêmes coordonnées (fictives, site de démonstration) remplacent les anciennes coordonnées dans le Footer et la page Contact.
 - **Loi 96 (langue française)** : le site était déjà entièrement en français sans version anglaise; correction de l'attribut `lang="en"` → `lang="fr-CA"` dans `client/index.html`, ajout d'un `<title>` et d'une meta description en français.
+- **Favicon** : logo Replit remplacé par `client/public/favicon.svg` (feuille Lucide blanche sur vert forêt, cohérente avec le logo du site).
+- **Refonte style « Cedar Springs » (cedarsprings.net) — 2026-10-10** :
+  - Police d'affichage **Epilogue** (300/400, titres géants en minuscules, `font-display`), encre `--ink` quasi noire, fond blanc.
+  - **Colonne de droite** signature (`--rail-w` = 20vw dès `lg`, 0 sur mobile) : pleine et sombre (`bg-rail`) sur les sections blanches, verre flouté sur les photos (composant `Rail` dans `Home.tsx`).
+  - Liens « Libellé | → » via `components/ArrowLink.tsx` au lieu des boutons arrondis.
+  - Accueil : hero plein écran, intro + « 10 ans d'expérience », carrousel « Projet vedette », démarche en 3 étapes, liste des expertises, CTA photo, mot de la fin.
+  - Navbar et Footer (partagés par toutes les pages) refaits dans le même style : menu hamburger aligné sur la colonne de droite, panneau sombre; footer en grille à filets fins.
 
 ## Stack choisie
 

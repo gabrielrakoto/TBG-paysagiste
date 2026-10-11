@@ -1,77 +1,62 @@
 import { Link } from "wouter";
-import { Leaf, MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
+import { Leaf, Instagram, Facebook } from "lucide-react";
+
+const links = [
+  { href: "/", label: "Accueil" },
+  { href: "/services", label: "Nos services" },
+  { href: "/realisations", label: "Nos réalisations" },
+  { href: "/contact", label: "Nous joindre" },
+];
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-primary-foreground pt-16 pb-8">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-
-          <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2">
-              <Leaf className="h-8 w-8 text-primary" />
-              <span className="font-serif text-2xl font-bold tracking-tight">
-                Paysagementpro
-              </span>
-            </Link>
-            <p className="text-muted/80 text-sm leading-relaxed">
-              Créateurs d'espaces extérieurs d'exception à Québec. Nous transformons votre vision en une oasis naturelle et durable.
-            </p>
-            <div className="flex gap-4 pt-2">
-              <a href="#" className="text-muted hover:text-primary transition-colors">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-muted hover:text-primary transition-colors">
-                <Instagram className="h-5 w-5" />
-              </a>
-            </div>
-          </div>
-
-          <div className="space-y-4">
-            <h4 className="font-serif text-lg font-semibold">Liens Rapides</h4>
-            <ul className="space-y-2 text-sm text-muted/80">
-              <li><Link href="/" className="hover:text-primary transition-colors">Accueil</Link></li>
-              <li><Link href="/services" className="hover:text-primary transition-colors">Nos Services</Link></li>
-              <li><Link href="/realisations" className="hover:text-primary transition-colors">Nos Réalisations</Link></li>
-              <li><Link href="/contact" className="hover:text-primary transition-colors">Nous Joindre</Link></li>
+    <footer className="border-t border-ink/15 bg-white text-ink">
+      <div className="lg:grid lg:grid-cols-[1fr_var(--rail-w)]">
+        <div className="grid gap-12 px-6 py-14 md:grid-cols-2 md:px-[30px]">
+          <div className="space-y-5">
+            <h4 className="font-display text-lg font-semibold">Contact</h4>
+            <ul className="space-y-3 text-sm text-ink/80">
+              <li>581-979-2198</li>
+              <li>gabrielrakotor40@outlook.com</li>
+              <li>1800 Rue Bresse, Québec, QC G2G 2N8</li>
             </ul>
           </div>
 
-          <div className="space-y-4">
-            <h4 className="font-serif text-lg font-semibold">Nos Services</h4>
-            <ul className="space-y-2 text-sm text-muted/80">
-              <li>Aménagement Paysager</li>
-              <li>Embellissement de Piscines</li>
-              <li>Jardins Décoratifs</li>
-              <li>Terrassement</li>
-            </ul>
-          </div>
-
-          <div className="space-y-4">
-            <h4 className="font-serif text-lg font-semibold">Contact</h4>
-            <ul className="space-y-3 text-sm text-muted/80">
-              <li className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-primary shrink-0" />
-                <span>1800 Rue Bresse,<br />Québec, QC G2G 2N8</span>
+          <ul className="grid grid-cols-2 gap-x-8 gap-y-5 content-start">
+            {links.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="font-display text-lg font-semibold transition-opacity hover:opacity-60">
+                  {link.label}
+                </Link>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-primary shrink-0" />
-                <span>581-979-2198</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-primary shrink-0" />
-                <span>gabrielrakotor40@outlook.com</span>
-              </li>
-            </ul>
-          </div>
+            ))}
+          </ul>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted/60">
-          <p>© {new Date().getFullYear()} Paysagementpro. Tous droits réservés.</p>
+        <div className="flex flex-col items-center justify-center gap-6 border-t border-ink/15 py-12 lg:border-l lg:border-t-0">
+          <Link href="/" className="flex items-center gap-2">
+            <Leaf className="h-7 w-7 text-primary" />
+            <span className="font-serif text-2xl font-bold tracking-tight">Paysagementpro</span>
+          </Link>
           <div className="flex gap-4">
-            <Link href="/politique-de-confidentialite" className="hover:text-white transition-colors">Politique de confidentialité</Link>
+            <a href="#" aria-label="Facebook" className="transition-opacity hover:opacity-60">
+              <Facebook className="h-5 w-5" />
+            </a>
+            <a href="#" aria-label="Instagram" className="transition-opacity hover:opacity-60">
+              <Instagram className="h-5 w-5" />
+            </a>
           </div>
         </div>
+      </div>
+
+      <div className="border-t border-ink/15 lg:grid lg:grid-cols-[1fr_var(--rail-w)]">
+        <div className="flex flex-col gap-3 px-6 py-6 text-sm text-ink/70 md:flex-row md:justify-between md:px-[30px]">
+          <p>© {new Date().getFullYear()} Paysagementpro. Tous droits réservés.</p>
+          <Link href="/politique-de-confidentialite" className="transition-colors hover:text-ink">
+            Politique de confidentialité
+          </Link>
+        </div>
+        <div className="hidden lg:block lg:border-l lg:border-ink/15" />
       </div>
     </footer>
   );

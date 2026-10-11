@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -38,6 +38,12 @@
     
     --font-sans: 'DM Sans', sans-serif;
     --font-serif: 'Playfair Display', serif;
+    --font-display: 'Epilogue', sans-serif;
+
+    /* Style « cedar » : encre quasi noire + colonne sombre à droite */
+    --ink: 240 3% 13%;
+    --rail: 150 6% 13%;
+    --rail-w: 0px;
   }
 
   .dark {
@@ -101,4 +107,11 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--primary) / 0.5);
+}
+
+/* Largeur de la colonne de droite (desktop seulement) */
+@media (min-width: 1024px) {
+  :root {
+    --rail-w: 20vw;
+  }
 }

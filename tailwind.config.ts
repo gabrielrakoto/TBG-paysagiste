@@ -11,6 +11,8 @@ export default {
         sm: ".1875rem", /* 3px */
       },
       colors: {
+        ink: "hsl(var(--ink) / <alpha-value>)",
+        rail: "hsl(var(--rail) / <alpha-value>)",
         // Flat / base colors (regular buttons)
         background: "hsl(var(--background) / <alpha-value>)",
         foreground: "hsl(var(--foreground) / <alpha-value>)",
@@ -85,6 +87,7 @@ export default {
       fontFamily: {
         sans: ["var(--font-sans)"],
         serif: ["var(--font-serif)"],
+        display: ["var(--font-display)"],
         mono: ["var(--font-mono)"],
       },
       keyframes: {
