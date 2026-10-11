@@ -1,5 +1,7 @@
+import { Link } from "wouter";
+import { ArrowRight } from "lucide-react";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
-import { Leaf, Waves, TreePine, Shovel, Check } from "lucide-react";
+import { Rail } from "@/components/Rail";
 
 import image1 from "@assets/b9e4cdc69_481462575_3899378960275555_154621930400892747_n_1772166840090.jpg";
 import image2 from "@assets/404c501e4_473551526_3862657073947744_3116717267078103199_n_1772166840090.jpg";
@@ -9,97 +11,91 @@ import image5 from "@assets/3d9efb3d1_119784194_2706942506185879_566335087219708
 const services = [
   {
     id: "paysagement",
-    title: "Paysagement Extérieur",
-    icon: Leaf,
-    description: "Nous concevons des plans d'aménagement sur mesure qui transforment votre cour en un espace de vie exceptionnel. De la plantation stratégique à la pose de gazon, notre expertise garantit un résultat durable et esthétique.",
+    category: "Paysagement",
+    title: "paysagement extérieur",
+    description:
+      "Nous concevons des plans d'aménagement sur mesure qui transforment votre cour en un espace de vie exceptionnel. De la plantation stratégique à la pose de gazon, notre expertise garantit un résultat durable et esthétique.",
     image: image1,
-    features: ["Plans 3D sur mesure", "Plantation d'arbres et arbustes", "Pose de tourbe", "Éclairage paysager"]
+    features: ["Plans 3D sur mesure", "Plantation d'arbres et arbustes", "Pose de tourbe", "Éclairage paysager"],
   },
   {
     id: "piscines",
-    title: "Embellissement de Piscines",
-    icon: Waves,
-    description: "Votre piscine mérite un écrin à sa hauteur. Nous créons des contours de piscine élégants, sécuritaires et faciles d'entretien en utilisant des matériaux de première qualité comme la pierre naturelle ou le pavé uni.",
+    category: "Piscines",
+    title: "embellissement de piscines",
+    description:
+      "Votre piscine mérite un écrin à sa hauteur. Nous créons des contours de piscine élégants, sécuritaires et faciles d'entretien en utilisant des matériaux de première qualité comme la pierre naturelle ou le pavé uni.",
     image: image2,
-    features: ["Contours en pavé uni", "Chutes d'eau intégrées", "Clôtures esthétiques", "Végétation adaptée"]
+    features: ["Contours en pavé uni", "Chutes d'eau intégrées", "Clôtures esthétiques", "Végétation adaptée"],
   },
   {
     id: "jardins",
-    title: "Jardins Décoratifs",
-    icon: TreePine,
-    description: "Apportez couleur et vie à votre propriété avec nos jardins décoratifs. Nous sélectionnons des plantes adaptées à notre climat québécois pour garantir une floraison magnifique du printemps à l'automne.",
+    category: "Jardins",
+    title: "jardins décoratifs",
+    description:
+      "Apportez couleur et vie à votre propriété avec nos jardins décoratifs. Nous sélectionnons des plantes adaptées à notre climat québécois pour garantir une floraison magnifique du printemps à l'automne.",
     image: image3,
-    features: ["Plates-bandes fleuries", "Jardins d'eau", "Rocailles", "Entretien saisonnier"]
+    features: ["Plates-bandes fleuries", "Jardins d'eau", "Rocailles", "Entretien saisonnier"],
   },
   {
     id: "terrassement",
-    title: "Terrassement",
-    icon: Shovel,
-    description: "La base de tout bon aménagement réside dans un terrassement professionnel. Nous modifions le relief de votre terrain pour en optimiser l'usage, prévenir les problèmes de drainage et créer des espaces plans.",
+    category: "Terrassement",
+    title: "terrassement",
+    description:
+      "La base de tout bon aménagement réside dans un terrassement professionnel. Nous modifions le relief de votre terrain pour en optimiser l'usage, prévenir les problèmes de drainage et créer des espaces plans.",
     image: image5,
-    features: ["Nivellement de terrain", "Murs de soutènement", "Drainage", "Excavation"]
-  }
+    features: ["Nivellement de terrain", "Murs de soutènement", "Drainage", "Excavation"],
+  },
 ];
 
 export default function Services() {
   return (
-    <div className="min-h-screen bg-background pt-24 pb-16">
-      {/* Header */}
-      <section className="bg-primary/5 py-16 mb-16 border-y border-border">
-        <div className="container px-4 md:px-6 mx-auto text-center max-w-3xl">
+    <div className="bg-white pt-20 text-ink">
+      {/* Services vedettes */}
+      <section className="relative pb-24 md:pb-32">
+        <Rail variant="light" />
+        <div className="relative z-20 px-6 md:px-[30px] lg:pr-[var(--rail-w)]">
           <AnimatedSection>
-            <h1 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">Nos Services</h1>
-            <p className="text-lg text-muted-foreground">
-              Découvrez notre gamme complète de services d'aménagement paysager. Nous mettons notre passion et notre savoir-faire au service de vos espaces extérieurs.
-            </p>
+            <h1 className="pt-16 pb-12 md:pt-28 md:pb-20 font-display font-light text-6xl md:text-8xl lg:text-[88px] leading-[0.95] tracking-[-0.02em]">
+              nos services
+            </h1>
           </AnimatedSection>
-        </div>
-      </section>
 
-      {/* Services Grid */}
-      <section className="container px-4 md:px-6 mx-auto">
-        <div className="grid gap-16 md:gap-24">
-          {services.map((service, index) => (
-            <AnimatedSection key={service.id} delay={0.1}>
-              <div className={`flex flex-col ${index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8 md:gap-12 items-center`}>
-                
-                <div className="w-full md:w-1/2">
-                  <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/3] group">
-                    <img 
-                      src={service.image} 
-                      alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="space-y-12 md:space-y-24">
+            {services.map((service, index) => (
+              <AnimatedSection key={service.id}>
+                <article
+                  id={service.id}
+                  className={`flex scroll-mt-28 flex-col gap-8 border border-ink/15 p-4 md:p-6 lg:gap-0 ${
+                    index % 2 === 1 ? "lg:flex-row-reverse lg:ml-[8%]" : "lg:flex-row lg:mr-[8%]"
+                  }`}
+                >
+                  <div className="relative aspect-[4/3] overflow-hidden lg:w-[58%]">
+                    <img src={service.image} alt={service.title} className="h-full w-full object-cover" />
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent px-5 pb-4 pt-12">
+                      <p className="truncate text-sm text-white">{service.features.join(" | ")}</p>
+                    </div>
                   </div>
-                </div>
 
-                <div className="w-full md:w-1/2 space-y-6">
-                  <div className="inline-flex items-center justify-center p-3 bg-primary/10 rounded-xl text-primary mb-2">
-                    <service.icon className="h-8 w-8" />
+                  <div className="flex flex-col justify-center pb-2 lg:w-[42%] lg:px-8 lg:pb-0">
+                    <p className="font-display text-xl md:text-2xl text-ink/60">Service</p>
+                    <h2 className="mt-1 font-display font-normal text-4xl md:text-5xl lg:text-[52px] leading-[1.02] tracking-[-0.02em]">
+                      {service.title}
+                    </h2>
+                    <p className="mt-6 text-[15px] leading-7 text-ink/75">{service.description}</p>
+                    <Link
+                      href="/contact"
+                      className="group mt-8 inline-flex items-center gap-4 self-start font-display text-xl md:text-2xl"
+                    >
+                      Demander une soumission
+                      <span className="grid h-9 w-9 place-items-center border border-current transition-colors group-hover:bg-ink group-hover:text-white">
+                        <ArrowRight className="h-5 w-5 stroke-[1.25]" />
+                      </span>
+                    </Link>
                   </div>
-                  <h2 className="text-3xl font-serif font-bold text-foreground">
-                    {service.title}
-                  </h2>
-                  <p className="text-muted-foreground text-lg leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <ul className="grid sm:grid-cols-2 gap-3 pt-4">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-foreground font-medium text-sm">
-                        <div className="rounded-full bg-primary/20 p-1">
-                          <Check className="h-3 w-3 text-primary" />
-                        </div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-              </div>
-            </AnimatedSection>
-          ))}
+                </article>
+              </AnimatedSection>
+            ))}
+          </div>
         </div>
       </section>
     </div>

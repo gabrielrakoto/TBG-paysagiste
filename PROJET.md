@@ -20,6 +20,9 @@ tu vois le pied de page lorsque je clique sur les liens qui mene vers le page du
   - **Colonne de droite** signature (`--rail-w` = 20vw dès `lg`, 0 sur mobile) : pleine et sombre (`bg-rail`) sur les sections blanches, verre flouté sur les photos (composant `Rail` dans `Home.tsx`).
   - Liens « Libellé | → » via `components/ArrowLink.tsx` au lieu des boutons arrondis.
   - Accueil : hero plein écran, intro + « 10 ans d'expérience », carrousel « Projet vedette », démarche en 3 étapes, liste des expertises, CTA photo, mot de la fin.
+  - Page Services calquée sur cedarsprings.net/projects : grand titre + fiches services encadrées en zigzag (photo + titre + soumission). Pas de galerie ni de CTA final (retirés à la demande de Gabriel : la galerie vit sur Réalisations). `Rail` sorti dans `components/Rail.tsx` (variantes dark / light / glass).
+  - Page Réalisations : fond blanc (colonne de droite claire), grand titre, filtres par service, cartes 3 colonnes (titre sur la photo, prestations au survol), agrandissement au clic.
+  - Page Nous joindre : même typo/style (titre géant, coordonnées en liste à filets, carte en niveaux de gris, formulaire encadré à champs soulignés, envoi « Envoyer la demande | → »). Logique du formulaire et consentement Loi 25 inchangés.
   - Navbar et Footer (partagés par toutes les pages) refaits dans le même style : menu hamburger aligné sur la colonne de droite, panneau sombre; footer en grille à filets fins.
 
 ## Stack choisie

@@ -1,10 +1,11 @@
-import { type ReactNode, useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Link } from "wouter";
 import { ArrowDown, ArrowRight, Facebook, Instagram } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { ArrowLink } from "@/components/ArrowLink";
+import { Rail } from "@/components/Rail";
 
 import image1 from "@assets/b9e4cdc69_481462575_3899378960275555_154621930400892747_n_1772166840090.jpg";
 import image2 from "@assets/404c501e4_473551526_3862657073947744_3116717267078103199_n_1772166840090.jpg";
@@ -43,21 +44,6 @@ const SERVICES = [
   "jardins décoratifs",
   "terrassement",
 ];
-
-/* Colonne de droite (desktop) : pleine et sombre sur fond blanc, en verre flouté sur les photos */
-function Rail({ variant, children }: { variant: "dark" | "glass"; children?: ReactNode }) {
-  return (
-    <div
-      className={`absolute inset-y-0 right-0 z-10 hidden lg:flex w-[var(--rail-w)] flex-col items-center ${
-        variant === "dark"
-          ? "bg-rail"
-          : "bg-white/15 backdrop-blur-xl border-l border-white/25"
-      }`}
-    >
-      {children}
-    </div>
-  );
-}
 
 export default function Home() {
   const [heroRef] = useEmblaCarousel({ loop: true, duration: 40 }, [
