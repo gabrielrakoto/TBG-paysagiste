@@ -1,5 +1,6 @@
 import { Link } from "wouter";
-import { Leaf, Instagram, Facebook } from "lucide-react";
+import { Instagram, Facebook } from "lucide-react";
+import logo from "@assets/logo-paysagementpro.png";
 
 const links = [
   { href: "/", label: "Accueil" },
@@ -34,9 +35,8 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col items-center justify-center gap-6 border-t border-ink/15 py-12 lg:border-l lg:border-t-0">
-          <Link href="/" className="flex items-center gap-2">
-            <Leaf className="h-7 w-7 text-primary" />
-            <span className="font-serif text-2xl font-bold tracking-tight">Paysagementpro</span>
+          <Link href="/" aria-label="Paysagementpro, accueil">
+            <img src={logo} alt="Paysagementpro" className="h-16 w-auto" />
           </Link>
           <div className="flex gap-4">
             <a href="#" aria-label="Facebook" className="transition-opacity hover:opacity-60">

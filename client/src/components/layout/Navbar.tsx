@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Leaf } from "lucide-react";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { ArrowLink } from "@/components/ArrowLink";
 import { motion } from "framer-motion";
+import logo from "@assets/logo-paysagementpro.png";
 
 const routes = [
   { path: "/", label: "accueil" },
@@ -41,9 +41,13 @@ export function Navbar() {
     >
       <div className="flex h-full items-center">
         <div className="flex flex-1 items-center justify-between gap-6 px-6 md:px-[30px]">
-          <Link href="/" className="flex items-center gap-2">
-            <Leaf className={`h-7 w-7 ${solid ? "text-primary" : "text-white"}`} />
-            <span className="font-serif text-2xl font-bold tracking-tight">Paysagementpro</span>
+          <Link href="/" aria-label="Paysagementpro, accueil">
+            {/* En blanc par-dessus la photo d'accueil, en couleurs ailleurs */}
+            <img
+              src={logo}
+              alt="Paysagementpro"
+              className={`h-12 md:h-14 w-auto transition-[filter] duration-300 ${solid ? "" : "brightness-0 invert"}`}
+            />
           </Link>
 
           <ArrowLink
