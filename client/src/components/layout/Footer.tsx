@@ -51,7 +51,7 @@ export function Footer() {
 
       <div className="border-t border-ink/15 lg:grid lg:grid-cols-[1fr_var(--rail-w)]">
         <div className="flex flex-col gap-3 px-6 py-6 text-sm text-ink/70 md:flex-row md:justify-between md:px-[30px]">
-          <p>© {new Date().getFullYear()} Paysagementpro. Tous droits réservés.</p>
+          <p>© {new Date().getFullYear()} Paysagementpro. Tous droits réservés. · Site fictif réalisé à des fins de démonstration (portfolio).</p>
           <Link href="/politique-de-confidentialite" className="transition-colors hover:text-ink">
             Politique de confidentialité
           </Link>

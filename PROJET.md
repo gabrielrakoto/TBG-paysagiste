@@ -24,6 +24,7 @@ tu vois le pied de page lorsque je clique sur les liens qui mene vers le page du
   - Page Réalisations : fond blanc (colonne de droite claire), grand titre, filtres par service, cartes 3 colonnes (titre sur la photo, prestations au survol), agrandissement au clic.
   - Page Nous joindre : même typo/style (titre géant, coordonnées en liste à filets, carte en niveaux de gris, formulaire encadré à champs soulignés, envoi « Envoyer la demande | → »). Logique du formulaire et consentement Loi 25 inchangés.
   - Navbar et Footer (partagés par toutes les pages) refaits dans le même style : menu hamburger aligné sur la colonne de droite, panneau sombre; footer en grille à filets fins.
+- **2026-10-11 — Vie privée (Loi 25)** : site fictif assumé (mention dans le footer), formulaire(s) en mode démo (rien n'est envoyé ni enregistré, c'est indiqué à l'écran), aucun service tiers chargé sans action de l'utilisateur : polices auto-hébergées, carte OpenStreetMap chargée seulement au clic sur « Afficher la carte ». La politique de confidentialité décrit exactement ça. `use-contact.ts` simule l'envoi (l'API `/api/contact` n'existe pas sur Vercel → 405) ; polices dans `client/public/fonts`, Google Maps remplacé par OSM.
 
 ## Stack choisie
 

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "wouter";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Input } from "@/components/ui/input";
@@ -26,6 +27,8 @@ const CONTACT_INFO = [
 
 export default function Contact() {
   const mutation = useCreateContactMessage();
+  // Carte OpenStreetMap chargée seulement au clic : aucune requête tierce avant.
+  const [showMap, setShowMap] = useState(false);
 
   const form = useForm<ContactMessageInput>({
     resolver: zodResolver(insertContactMessageSchema),
@@ -74,16 +77,29 @@ export default function Contact() {
               </dl>
 
               <div className="mt-10 h-[300px] overflow-hidden border border-ink/15 bg-[#f2f2f2]">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2730.8066126255267!2d-71.38684289999999!3d46.8081152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb899a1bc9bb7e5%3A0xee77ca8083d08aaa!2s1800%20Rue%20Bresse%2C%20Qu%C3%A9bec%2C%20QC%20G2G%202N8!5e0!3m2!1sfr!2sca!4v1772170258642!5m2!1sfr!2sca"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0, filter: "grayscale(1)" }}
-                  allowFullScreen={true}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Carte de localisation"
-                ></iframe>
+                {showMap ? (
+                  <iframe
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-71.3938%2C46.8041%2C-71.3798%2C46.8121&layer=mapnik&marker=46.8081%2C-71.3868"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0, filter: "grayscale(1)" }}
+                    referrerPolicy="no-referrer"
+                    title="Carte de localisation"
+                  ></iframe>
+                ) : (
+                  <div className="flex h-full flex-col items-center justify-center gap-5 p-6 text-center">
+                    <p className="max-w-xs text-sm leading-6 text-ink/60">
+                      La carte est fournie par OpenStreetMap, un service tiers. Elle ne se charge que si vous cliquez ci-dessous.
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => setShowMap(true)}
+                      className="border border-ink/30 px-5 py-2.5 font-display text-sm transition-colors hover:bg-ink hover:text-white"
+                    >
+                      Afficher la carte
+                    </button>
+                  </div>
+                )}
               </div>
             </AnimatedSection>
 
@@ -196,6 +212,9 @@ export default function Contact() {
                         aria-hidden="true"
                       />
                     </button>
+                    <p className="text-xs leading-5 text-ink/50">
+                      Formulaire de démonstration (site fictif) : les renseignements saisis ne sont ni envoyés ni enregistrés.
+                    </p>
                   </form>
                 </Form>
               </div>

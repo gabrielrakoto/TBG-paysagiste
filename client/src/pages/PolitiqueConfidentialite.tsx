@@ -13,12 +13,19 @@ export default function PolitiqueConfidentialite() {
             Politique de confidentialité
           </h1>
           <p className="text-muted-foreground">
-            Dernière mise à jour : 6 septembre 2026
+            Dernière mise à jour : 11 octobre 2026
           </p>
         </AnimatedSection>
 
         <AnimatedSection delay={0.1} className="prose prose-neutral dark:prose-invert max-w-none space-y-10">
           <div className="bg-card border border-border/50 rounded-3xl p-8 md:p-10 shadow-sm space-y-4">
+            <p className="text-muted-foreground leading-relaxed m-0">
+              <strong>Avis — site fictif.</strong> Paysagementpro est une entreprise fictive; ce site a
+              été réalisé à des fins de démonstration pour un portfolio. Le formulaire de contact est une
+              démonstration : les renseignements saisis ne sont <strong>ni envoyés, ni enregistrés, ni
+              conservés</strong>. La présente politique illustre celle qu'appliquerait l'entreprise si
+              elle était réelle.
+            </p>
             <p className="text-muted-foreground leading-relaxed m-0">
               Paysagementpro (« nous », « notre » ou « nos ») s'engage à protéger la vie privée des
               personnes qui visitent ce site web et qui communiquent avec nous. Cette politique décrit
@@ -44,11 +51,14 @@ export default function PolitiqueConfidentialite() {
                 projet).
               </li>
               <li>
-                <strong>Cookies et données de navigation :</strong> à ce jour, ce site n'utilise aucun
-                cookie de suivi ni outil d'analyse publicitaire (ex. Google Analytics, Meta Pixel). Si
-                un tel outil devait être ajouté ultérieurement, cette politique serait mise à jour avant
-                son activation et, le cas échéant, votre consentement vous serait demandé au moyen d'une
-                bannière de cookies.
+                <strong>Cookies et données de navigation :</strong> ce site n'utilise aucun cookie
+                ni outil d'analyse (ex. Google Analytics, Meta Pixel), et aucun service tiers n'est
+                contacté au chargement des pages : les polices de caractères sont hébergées sur le site
+                lui-même. L'hébergeur (Vercel) traite techniquement votre adresse IP pour afficher les
+                pages, sur des serveurs qui peuvent être situés hors du Québec. La carte de la page
+                Contact (OpenStreetMap) ne se charge que si vous cliquez sur « Afficher la carte »; votre
+                adresse IP est alors transmise à la Fondation OpenStreetMap. Si un outil de suivi était
+                ajouté, il ne serait activé qu'après votre consentement, au moyen d'une bannière.
               </li>
             </ul>
           </div>
