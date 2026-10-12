@@ -145,8 +145,8 @@ export default function PolitiqueConfidentialite() {
             </ul>
             <p className="text-muted-foreground leading-relaxed">
               Pour exercer l'un de ces droits, communiquez avec notre responsable de la protection des
-              renseignements personnels aux coordonnées indiquées à la section 4. Nous répondrons à toute
-              demande dans un délai raisonnable, conformément aux exigences de la Loi 25.
+              renseignements personnels aux coordonnées indiquées à la section 4. Nous répondrons à votre
+              demande au plus tard dans les 30 jours suivant sa réception, conformément à la Loi 25.
             </p>
           </div>
 
