@@ -42,7 +42,7 @@ Champs : Nom, Email, Téléphone, Message Bouton d'envoi stylisé Validation des
 
 Informations de contact
 
-Email : gelinasjeff01@gmail.com Téléphone : (418) 575-8529 Adresse : 1800 Rue Bresse, Québec, QC G2G 2P2 Facebook : https://www.facebook.com/TBGpaysagiste?locale=fr_CA
+[Coordonnées réelles retirées — site fictif de démonstration]
 
 Carte Google Maps intégrée
 

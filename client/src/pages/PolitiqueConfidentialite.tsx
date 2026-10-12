@@ -122,9 +122,9 @@ export default function PolitiqueConfidentialite() {
                   <Mail className="h-4 w-4" />
                   gabrielrakotor40@outlook.com
                 </a>
-                <a href="tel:+15819792198" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
+                <a href="tel:+14185550187" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
                   <Phone className="h-4 w-4" />
-                  581-979-2198
+                  418-555-0187
                 </a>
               </div>
             </div>

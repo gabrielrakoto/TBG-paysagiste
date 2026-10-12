@@ -19,8 +19,8 @@ const FIELD =
 const LABEL = "font-display text-sm font-normal text-ink/60";
 
 const CONTACT_INFO = [
-  { label: "Adresse", value: <>1800 Rue Bresse,<br />Québec, QC G2G 2N8</> },
-  { label: "Téléphone", value: "581-979-2198" },
+  { label: "Adresse", value: <>450, chemin des Jardiniers,<br />Québec, QC G2G 0A5</> },
+  { label: "Téléphone", value: "418-555-0187" },
   { label: "Courriel", value: "gabrielrakotor40@outlook.com" },
   { label: "Heures", value: <>Lun - Ven : 8h00 - 17h00<br />Sam - Dim : Fermé</> },
 ];
@@ -79,7 +79,7 @@ export default function Contact() {
               <div className="mt-10 h-[300px] overflow-hidden border border-ink/15 bg-[#f2f2f2]">
                 {showMap ? (
                   <iframe
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=-71.3938%2C46.8041%2C-71.3798%2C46.8121&layer=mapnik&marker=46.8081%2C-71.3868"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-71.3938%2C46.8041%2C-71.3798%2C46.8121&layer=mapnik"
                     width="100%"
                     height="100%"
                     style={{ border: 0, filter: "grayscale(1)" }}

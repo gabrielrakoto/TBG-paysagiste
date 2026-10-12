@@ -17,9 +17,9 @@ export function Footer() {
           <div className="space-y-5">
             <h4 className="font-display text-lg font-semibold">Contact</h4>
             <ul className="space-y-3 text-sm text-ink/80">
-              <li>581-979-2198</li>
+              <li>418-555-0187</li>
               <li>gabrielrakotor40@outlook.com</li>
-              <li>1800 Rue Bresse, Québec, QC G2G 2N8</li>
+              <li>450, chemin des Jardiniers, Québec, QC G2G 0A5</li>
             </ul>
           </div>
 
