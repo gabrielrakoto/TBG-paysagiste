@@ -6,7 +6,7 @@ import { Rail } from "@/components/Rail";
 import image1 from "@assets/b9e4cdc69_481462575_3899378960275555_154621930400892747_n_1772166840090.jpg";
 import image2 from "@assets/404c501e4_473551526_3862657073947744_3116717267078103199_n_1772166840090.jpg";
 import image3 from "@assets/32d1c0c61_474792806_3870058806540904_6220378788283094045_n_1772166840091.jpg";
-import image5 from "@assets/3d9efb3d1_119784194_2706942506185879_5663350872197088632_n_1772166840092.jpg";
+import imageTerrassement from "@assets/terrassement-pexels-mographe.jpg";
 
 const services = [
   {
@@ -42,7 +42,7 @@ const services = [
     title: "terrassement",
     description:
       "La base de tout bon aménagement réside dans un terrassement professionnel. Nous modifions le relief de votre terrain pour en optimiser l'usage, prévenir les problèmes de drainage et créer des espaces plans.",
-    image: image5,
+    image: imageTerrassement,
     features: ["Nivellement de terrain", "Murs de soutènement", "Drainage", "Excavation"],
   },
 ];
